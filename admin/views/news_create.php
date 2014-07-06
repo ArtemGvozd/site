@@ -13,7 +13,6 @@
         <td></td><td> <input type="submit" name="buton" value=" Жмакай " /></tr></tr>
     </table>
 </form>
-        </div>
 ?>
 <center>
 <?php
@@ -22,4 +21,5 @@ foreach ($error as $q) {
 }
 ?>
 </center>
+</div>
 <?php foot(); ?>

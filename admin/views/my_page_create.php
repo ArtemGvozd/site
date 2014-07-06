@@ -14,8 +14,6 @@
                 <td></td><td><input type="submit" name="buton" value=" Создать "</td></tr>
         </table>
     </form>
-    
-</div>
 <center>
 <?php
 foreach ($error as $q) {
@@ -23,4 +21,5 @@ foreach ($error as $q) {
 }
 ?>
 </center>
+</div>
 <?php foot();?>

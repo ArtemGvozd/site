@@ -14,7 +14,7 @@
             <td></td><td><input type="submit" name="buton" value=" OK "></td></tr>
         </table>
     </form>
-</div>     
+     
  <center>
 <?php
 foreach($error as $p) {
@@ -24,4 +24,4 @@ foreach($error as $p) {
 </center>
 
 <?php foot();?>
-
+</div>
