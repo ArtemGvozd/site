@@ -1,11 +1,11 @@
-body,div,b,h2,a {
+body, div, b, h2, a {
     padding: 0px; /* растояние от контента до рамки*/
-    margin: 0px;  /* расстояние от рамки до внешних отступов..*/    
+    margin: 0px; /* расстояние от рамки до внешних отступов..*/
 }
-    body {
-    background-image: url('../imgs/dd.jpg');
+
+body {
+    background-image: url('../images/dd.jpg');
 }
-    
 
 #wrapper {
     background-image: url('../imgs/ii.jpg');
@@ -19,6 +19,7 @@ body,div,b,h2,a {
     padding: 0;
     height: 180px;
 }
+
 #logo {
     background-image: url('../imgs/t2.jpg');
     background-position: center;
@@ -34,26 +35,27 @@ body,div,b,h2,a {
     left: 30px;
 }
 
-#logo:hover { 
-    background-image: url('../imgs/t23.jpg');
-} /* картинка при наведении курсора */
-    
+#logo:hover {
+    background-image: url('../images/t23.jpg');
+}
+
+/* картинка при наведении курсора */
 
 #slogan {
     position: relative;
     margin: 0;
     padding: 0;
-    bottom:  130px;
+    bottom: 130px;
     text-align: center;
     background: none;
 }
 
-.slogan { 
+.slogan {
     font-family: Marck Script;
     font-size: 22px;
 }
 
-#header_line {  
+#header_line {
     position: relative;
     height: 20px;
     text-align: center;
@@ -62,7 +64,7 @@ body,div,b,h2,a {
 
 #glavnaj {
     background: none;
-    position:absolute;
+    position: absolute;
     width: 70px;
     height: 20px;
     bottom: 8px;
@@ -71,7 +73,7 @@ body,div,b,h2,a {
 
 #contacts {
     background: none;
-    position:absolute;
+    position: absolute;
     width: 70px;
     height: 20px;
     bottom: 8px;
@@ -93,9 +95,8 @@ body,div,b,h2,a {
     width: 110px;
     height: 20px;
     bottom: 8px;
-    right:  100px;
+    right: 100px;
 }
-
 
 #content {
     height: 800px;
@@ -111,22 +112,26 @@ body,div,b,h2,a {
     height: 30px;
     width: 100%;
     text-align: center;
-    clear:both;
+    clear: both;
 }
 
-
-h3 { font-size: 12pt; text-align: center}
+h3 {
+    font-size: 12pt;
+    text-align: center
+}
 
 a {
     text-decoration: none;
     color: #0903DE;
 }
 
-.content { font-family: "Arial"; }
+.content {
+    font-family: "Arial";
+}
 
 .news_item {
-margin-left: 10px;    
-background-image: none;
+    margin-left: 10px;
+    background-image: none;
 }
 
 .admin {
@@ -136,19 +141,18 @@ background-image: none;
     background-image: none;
     text-align: right;
     padding: 0px; /* растояние от контента до рамки*/
-    margin: 0px;  /* расстояние от рамки до внешних отступов..*/
+    margin: 0px; /* расстояние от рамки до внешних отступов..*/
 }
 
-
 #content_admin {
-    background: rgba(206,128,62,0.8);
+    background: rgba(206, 128, 62, 0.8);
     padding: 0px;
     margin: 0px auto;
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
-    }
+}
 
 #add {
     padding: 0px;
@@ -158,22 +162,25 @@ background-image: none;
     left: 80px;
     background: none;
 }
+
 #ex {
     position: absolute;
     top: 2px;
     right: 10px;
     background: inherit;
 }
+
 #n {
     position: relative;
     top 20px;
     left: 10px;
     background: inherit;
 }
+
 #m_page {
     position: absolute;
     top: 1px;
-    right:80px;
+    right: 80px;
     background: inherit;
 }
 
@@ -198,7 +205,7 @@ background-image: none;
     background-image: url('../imgs/dd.jpg');
     width: 820px;
     height: 460px;
-    bottom:  30px;
+    bottom: 30px;
     left: 70px;
 }
 
@@ -207,29 +214,29 @@ background-image: none;
     background: #000000;
     width: 800px;
     height: 350px;
-    bottom:  -8px;
+    bottom: -8px;
     left: 10px;
 }
 
 #butons {
-display: inline-block;
-font-size: 14px;
-font-weight: bold;
-color: #EFFAFA;
-text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5);
-letter-spacing: 0;
-border: none;
-box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-border-radius: 6px;
-text-decoration: none;
-padding: 5px 30px;
-font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-background: url('../imgs/dd.jpg') repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #396337), color-stop(0.00, #1c281f));
-background: url('../imgs/dd.jpg') repeat, -webkit-linear-gradient(#1c281f, #396337);
-background: url('../imgs/dd.jpg') repeat, -moz-linear-gradient(#1c281f, #396337);
-background: url('../imgs/dd.jpg') repeat, -o-linear-gradient(#1c281f, #396337);
-background: url('../imgs/dd.jpg') repeat, -ms-linear-gradient(#1c281f, #396337);
-background: url('../imgs/dd.jpg') repeat, linear-gradient(#1c281f, #396337);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #EFFAFA;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5);
+    letter-spacing: 0;
+    border: none;
+    box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 5px 30px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background: url('../images/dd.jpg') repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #396337), color-stop(0.00, #1c281f));
+    background: url('../images/dd.jpg') repeat, -webkit-linear-gradient(#1c281f, #396337);
+    background: url('../images/dd.jpg') repeat, -moz-linear-gradient(#1c281f, #396337);
+    background: url('../images/dd.jpg') repeat, -o-linear-gradient(#1c281f, #396337);
+    background: url('../images/dd.jpg') repeat, -ms-linear-gradient(#1c281f, #396337);
+    background: url('../images/dd.jpg') repeat, linear-gradient(#1c281f, #396337);
 }
 
 
