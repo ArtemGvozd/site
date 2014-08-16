@@ -3,12 +3,12 @@ body,div,b,h2,a {
     margin: 0px;  /* расстояние от рамки до внешних отступов..*/    
 }
     body {
-    background-image: url('../images/dd.jpg');
+    background-image: url('../imgs/dd.jpg');
 }
     
 
 #wrapper {
-    background-image: url('../images/ii.jpg');
+    background-image: url('../imgs/ii.jpg');
     padding: 0px;
     margin: 0px auto;
     width: 1000px;
@@ -20,7 +20,7 @@ body,div,b,h2,a {
     height: 180px;
 }
 #logo {
-    background-image: url('../images/t2.jpg');
+    background-image: url('../imgs/t2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -35,7 +35,7 @@ body,div,b,h2,a {
 }
 
 #logo:hover { 
-    background-image: url('../images/t23.jpg');
+    background-image: url('../imgs/t23.jpg');
 } /* картинка при наведении курсора */
     
 
@@ -102,11 +102,11 @@ body,div,b,h2,a {
     background-color: #FFFAFA;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/ii3.jpg')
+    background-image: url('../imgs/ii3.jpg')
 }
 
 #footer {
-    background: url('../images/l.jpg');
+    background: url('../imgs/l.jpg');
     position: relative;
     height: 30px;
     width: 100%;
@@ -195,7 +195,7 @@ background-image: none;
     padding: 0px;
     margin: 0px;
     position: absolute;
-    background-image: url('../images/dd.jpg');
+    background-image: url('../imgs/dd.jpg');
     width: 820px;
     height: 460px;
     bottom:  30px;
@@ -224,12 +224,12 @@ border-radius: 6px;
 text-decoration: none;
 padding: 5px 30px;
 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-background: url('../images/dd.jpg') repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #396337), color-stop(0.00, #1c281f));
-background: url('../images/dd.jpg') repeat, -webkit-linear-gradient(#1c281f, #396337);
-background: url('../images/dd.jpg') repeat, -moz-linear-gradient(#1c281f, #396337);
-background: url('../images/dd.jpg') repeat, -o-linear-gradient(#1c281f, #396337);
-background: url('../images/dd.jpg') repeat, -ms-linear-gradient(#1c281f, #396337);
-background: url('../images/dd.jpg') repeat, linear-gradient(#1c281f, #396337);
+background: url('../imgs/dd.jpg') repeat, -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #396337), color-stop(0.00, #1c281f));
+background: url('../imgs/dd.jpg') repeat, -webkit-linear-gradient(#1c281f, #396337);
+background: url('../imgs/dd.jpg') repeat, -moz-linear-gradient(#1c281f, #396337);
+background: url('../imgs/dd.jpg') repeat, -o-linear-gradient(#1c281f, #396337);
+background: url('../imgs/dd.jpg') repeat, -ms-linear-gradient(#1c281f, #396337);
+background: url('../imgs/dd.jpg') repeat, linear-gradient(#1c281f, #396337);
 }
 
 
