@@ -33,7 +33,7 @@ if(!empty($_POST['buton'])) {
     }else {
         $error[] = "Введите Логин";
     }
-    
+
     if(!empty($_POST['pasword'])) {
         if(is_scalar($_POST['pasword'])) {
             if (strlen($_POST['pasword']) < 20) {
@@ -61,11 +61,13 @@ if(!empty($_POST['buton'])) {
     } else {
         $error[] = "Введите ПАРОЛЬ";
     }
+
     if (empty($error)) {
+        $hash = md5($pasword);
         $sql= $conect->prepare("INSERT INTO admin(name,login,pasword)VALUES(:name, :login, :pasword)");
         $sql->bindParam(':name', $name);
         $sql->bindParam(':login', $login);
-        $sql->bindParam(':pasword', $pasword);
+        $sql->bindParam(':pasword', $hash);
         $sql->execute();
         header('Location: index.php?r=admins');
         exit();

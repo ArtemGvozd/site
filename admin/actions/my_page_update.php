@@ -48,7 +48,7 @@ if(!empty($_POST)) {
     /*если в полях паролей что то есть
      * делаем валидацию данных
      */
-    if(!empty($_POST['pasword']) || !empty($_POST['paswo_d'])) {
+    if(!empty($_POST['pasword']) || !empty($_POST['paswor_d'])) {
         if(!empty($_POST['pasword'])) {
             if(is_scalar($_POST['pasword'])) {
                 if(strlen($_POST['pasword'])<20) {
@@ -108,8 +108,9 @@ if(!empty($_POST)) {
          * если в пое пароль что - т есть
          */
         if(!empty($pasword)) {
-            $sql = $conect->prepare("UPDATE admin set paswors = :pasword WHERE id= :id");
-            $sql->bindParam(':pasword',$pasword);
+            $hash = md5($pasword);
+            $sql = $conect->prepare("UPDATE admin set pasword = :pasword WHERE id= :id");
+            $sql->bindParam(':pasword',$hash);
             $sql->bindParam(':id',$_GET['id']);
             $sql->execute();
         }

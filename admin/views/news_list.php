@@ -1,21 +1,17 @@
 <?php head();?>
-<div id="content_admin">
-<a href="index.php?r=news_create"> Добавление Новостей </a><br>
-
-<?php
-$from=($page-1)*5;	//кол-во записей начиная с    или от .. 
-$to=($page)*5;		//кол-во записей ДО   или По ...
-echo $from . "-" . $to;
-?>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <a href="index.php?r=news_create"> Добавление Новостей </a><br>
+    </div>
 
 <?php if ($result) : ?>
-<table border="1">
+    <table class="table table-hover">
     <tr>
-        <td>ID</td>
-        <td><b>Заголовок</b></td>
-        <td><b>Описание</b></td>
-        <td><b>Полный текст</b></td>
-        <td><b>Удаление / Изменение</b></td>
+        <td class="info">ID</td>
+        <td class="info"><b>Заголовок</b></td>
+        <td class="info"><b>Описание</b></td>
+        <td class="info"><b>Полный текст</b></td>
+        <td class="info"><b>Удаление / Изменение</b></td>
     </tr>
 <?php foreach ($result as $item) : ?>
 <tr>
@@ -23,7 +19,7 @@ echo $from . "-" . $to;
     <td><?php echo $item['title']; ?></td>
     <td><?php echo $item['description']; ?></td>
     <td><?php echo $item['content']; ?></td>
-    <td><a href="index.php?r=news_delete&id=<?php echo $item['id']; ?>"> Удалить </a>  / 
+    <td><a href="index.php?r=delete_realy&id=<?php echo $item['id']; ?>"> Удалить </a>  /
         <a href="index.php?r=news_update&id=<?php echo $item['id']; ?>"> Изменить </a>
     </td>
 </tr>

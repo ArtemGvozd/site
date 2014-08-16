@@ -1,14 +1,16 @@
 <?php head(); ?>
-<div id="content_admin">
-    <a href="index.php?r=my_page_create"><pre> Добавление администратора </pre></a>
+<div class="panel panel-default">
+    <div class="panel-body">
+<a href="index.php?r=my_page_create">Добавление администратора</a>
+    </div>
 <?php if ($result) : ?>
-<table border="1">
+    <table class="table table-hover">
     <tr>
-        <td>ID</td>
-        <td>Login</td>
-        <td>Password</td>
-        <td>Name</td>
-        <td> Измененить / Удалить</td>
+        <td class="info"><b>ID</b></td>
+        <td class="info"><b>Login</b></td>
+        <td class="info"><b>Password</b></td>
+        <td class="info"><b>Name</b></td>
+        <td class="info"><b>Изменение / Удаление</b></td>
     </tr>
 <?php foreach ($result as $item) : ?>
 <tr>

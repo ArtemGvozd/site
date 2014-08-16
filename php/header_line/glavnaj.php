@@ -1,59 +1,42 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <meta charset="utf-8">
+    <script src="assets/3p/jquery-2.1.1.js"></script>
+    <script src="assets/3p/bootstrap/js/bootstrap.min.js"></script>
+    <link href="assets/3p/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
 <body>
-<h2>Вам нужен :</h2> 
-Шкаф-купе, детская, кухня, мебель для гостиной, прихожая, офисная мебель или другая качественная корпусная мебель на заказ по доступной цене?<br>
-Мы поможем воплотить в жизнь Ваши самые смелые фантазии. 
-Ведь для нас изготовление мебели на заказ - это творческий процесс, поиск новых идей и технических решений.
-<h2>Производство мебели находится в Мелитополе.</h2></p> Мы занимаемся изготовлением мебели уже много лет. На всю мебель мы предоставляем гарантию и постгарантийное обслуживание.<br>
-Вся наша мебель изготавливается из безопасных и экологически чистых материалов. Мы изготавливаем как дешевую так и эксклюзивную мебель на заказ - все по вашему желанию, возможностям и вкусу.
 
-При заказе на изготовление мебели - выезд дизайнера, проектирование, доставка, занос, установка, сборка <b>БЕСПЛАТНО!</b>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
 
-<br>Шкафы купе акция. <b>АКЦИЯ ДО 1 ИЮЛЯ!</b> ЛЕТНИЕ СКИДКИ ЗА ВАШИ УЛЫБКИ!!!<br>
-СКИДКИ ДО -30% НА ШКАФЫ КУПЕ ПО ГОТОВОМУ ПРОЕКТУ!!!
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="gallery/nife.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="gallery/t23.jpg" alt="">
+            <div class="carousel-caption">
+            </div>
+        </div>
+    </div>
 
-АКЦИЯ ДЕЙСТВУЕТ ДО 1.07.2014.<br>
-
-<p>В нашей компании при заказе мебели Вы также можете получить бесплатную консультацию профессионального дизайнера.<br>
-    Наши специалисты внимательно <b>Вас</b> выслушают и ответят на все интересующие вопросы. Мы подскажем Вам оригинальную идею исполнения Вашей мебели, в которой будут учтены все нюансы интерьера Вашего дома или офиса, также мы поможем с выбором материала, его фактуры и цветового фона.<br> 
-    Кроме того, мы можем дать Вам совет, как лучше спроектировать мебель, чтобы она вписалась в интерьер и преобразила его.
-
-Мебель на заказ от компании "МЕ<i>б</i>ЛИТОПОЛЬ" воплотит все Ваши фантазии в реальность!
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<?php
-/*
-if(!empty($_GET['n']) && $_GET['n']>0) { //Если n не пустая и она передана
-    $sql = "SELECT * FROM news WHERE id=". intval($_GET['n']);// создаем запрос выборки
-    $st=$conect->query($sql); //результат выражение
-    $result=$st->fetch(); //метод fetch возвращает нам  массив
-
-    if (!empty($result)) { // если не пустая РЕЗУЛЬТАТ
-        echo "<h1>" .$result['title'] . "</h1>";
-        echo "<i>" .$result['description'] . "</i><br>";
-        echo "<i>" .$result['content'] . "</i>";
-    } else {
-        echo 'НЕТ НОВОСТИ!!БОЛТ';
-    }
-    
-    }else {
-$sql = "SELECT * FROM news";
-$st=$conect->query($sql); //результат выражения
-$result=$st->fetchAll();
-foreach ($result as $v) {
-    echo "<div class='news_item'><h2>" .$v['title'] ."</h2><i><a href='index.php?id=glavnaj&n=".$v['id']."'>". $v['description'] ."</a></i><br></div>";
-}
-}*/
-?>

@@ -1,4 +1,9 @@
 <?php
+// Добавить расширение .файла +
+// Вывести Галерею.    ~~ ???
+// Начать J.s
+// научится создавать DOM elements and delete DOM elements - манипулировать ими. (свойства)
+// Bootstrap разобраться.
 ob_start();
 session_start();
 if(empty($_SESSION['in'])) {
@@ -8,8 +13,9 @@ if(empty($_SESSION['in'])) {
 
 $action = empty($_GET['r']) ? 'menu_admin' : $_GET['r'];
 $allowed = array('menu_admin', 'news_list', 'news_update', 'news_create',
-                'news_delete', 'my_page','my_page_update',
-                'my_page_create','my_page_delete','admins','galery','galery_create');
+                'news_delete', 'my_page','my_page_update','my_page_create',
+                'my_page_delete','admins','products_list','products_create',
+                'products_delete','products_update','products_delete_confirm');
 
 require_once getcwd() . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'bd' . DIRECTORY_SEPARATOR . 'configuration.php';
 $conect = new PDO("mysql:host=" . DB_SERVER_NAME. ";dbname=" . DB_NAME,DB_LOGIN,DB_PASW); // подключение к бд

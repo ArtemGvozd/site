@@ -1,7 +1,6 @@
 <?php head();?>
-<div id="content_admin">
     <form method="POST">
-        <table border="1">
+        <table class="table table-hover">
             <tr>
                 <td> Имя </td><td><input type="text" name="name" ></td></tr>
             <tr>

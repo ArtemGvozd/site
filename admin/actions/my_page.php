@@ -103,8 +103,9 @@ if(!empty($_POST)) {
         $sql->execute();
         
         if (!empty($pasword)) {
+            $hash = md5($pasword);
             $sql = $conect->prepare("UPDATE admin set pasword= :pasword WHERE id= :id");
-            $sql->bindParam(':pasword', $pasword);
+            $sql->bindParam(':pasword', $hash);
             $sql->bindParam(':id',$_SESSION['in']);
             $sql->execute();
         }

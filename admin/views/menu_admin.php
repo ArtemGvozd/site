@@ -1,5 +1,6 @@
 <?php head();?> 
-<div id="content_admin">
+
+    <div class="center-block"></div>
 
 </div>
 <? foot(); ?>

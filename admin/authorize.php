@@ -9,9 +9,10 @@ if (isset($_POST['go'])) {
             include "../bd/configuration.php";
             $conect = new PDO("mysql:host=" . DB_SERVER_NAME. ";dbname=" . DB_NAME,DB_LOGIN,DB_PASW);
             //указываем переменные с базы данных;
+            $hash = md5($_POST['pass']);
             $sql = $conect->prepare("SELECT * FROM admin WHERE login= :login AND pasword = :pasword"); 
             $sql->bindParam(':login', $_POST['login']);// переменные и метод из формы ;
-            $sql->bindParam(':pasword', $_POST['pass']); // переменные и метод из формы ;
+            $sql->bindParam(':pasword', $hash); // переменные и метод из формы ;
             $sql->execute();
             $result = $sql->fetch();
                 if (empty($result)){
@@ -24,23 +25,40 @@ if (isset($_POST['go'])) {
         }
     }
 }
-echo '<meta http-equiv="content-type" content="text/html; charset=utf-8" />';
 ?>
-<center>
-<form action=""  method="post" >
-    <table border="0">
-        <tr>
-            <td>Login: </td><td><input type="text" name="login" /></td></tr>
-        <tr>
-            <td>Password: </td> <td><input type="password" name="pass"></td></tr>
-        <tr>
-            <td></td> <td><input type="submit" name="go" value="Go_GO_gO" /></td></tr>
-    </table>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="../bootstrap/js/jquery-latest.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<form action="" method="POST" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="inputLogin" class="col-sm-4 control-label">Login</label>
+        <div class="col-sm-3">
+            <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Введите логин">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-4 control-label">Password</label>
+        <div class="col-sm-3">
+            <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="ВВедите пароль">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" name="go" class="btn btn-primary">Войти</button>
+        </div>
+    </div>
 </form>
-<?php
-foreach ($error as $i)
-{
-echo $i . "<br>";
-}
+    <?php
+        foreach ($error as $i) {
+            echo $i . "<br>";
+        }
 ?>
-</center>
+</div>
+</body>
+</html>
