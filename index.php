@@ -8,7 +8,7 @@ $conect = new PDO("mysql:host=" . DB_SERVER_NAME. ";dbname=" . DB_NAME,DB_LOGIN,
 <head>
     <title> Моя Первая страница<?php $title?> </title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css" />
 </head>
 
 <body><div class="admin"><a href="admin/authorize.php"> войти </a></div>
