@@ -8,7 +8,7 @@ body {
 }
 
 #wrapper {
-    background-image: url('../imgs/ii.jpg');
+    background-image: url('../images/ii.jpg');
     padding: 0px;
     margin: 0px auto;
     width: 1000px;
@@ -21,7 +21,7 @@ body {
 }
 
 #logo {
-    background-image: url('../imgs/t2.jpg');
+    background-image: url('../images/t2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -103,11 +103,11 @@ body {
     background-color: #FFFAFA;
     position: relative;
     overflow: hidden;
-    background-image: url('../imgs/ii3.jpg')
+    background-image: url('../images/ii3.jpg')
 }
 
 #footer {
-    background: url('../imgs/l.jpg');
+    background: url('../images/l.jpg');
     position: relative;
     height: 30px;
     width: 100%;
@@ -202,7 +202,7 @@ a {
     padding: 0px;
     margin: 0px;
     position: absolute;
-    background-image: url('../imgs/dd.jpg');
+    background-image: url('../images/dd.jpg');
     width: 820px;
     height: 460px;
     bottom: 30px;

@@ -37,9 +37,9 @@ $sql = $conect->prepare("SELECT * FROM products");
 
 $sql->execute();
 $result = $sql->fetchAll();
-foreach($result as $item) {
-    echo '<a href="index.php?id=gallery_view&product_id='.$item['id'].'">';
-    echo '<img src="gallery/' . $item['image_name'].'" >';
+foreach ($result as $item) {
+    echo '<a href="index.php?id=gallery_view&product_id=' . $item['id'] . '">';
+    echo '<img src="gallery/' . $item['image_name'] . '" >';
     echo '</a>';
 }
 ?>

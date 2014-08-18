@@ -5,10 +5,10 @@
 // LIMIT [(CURR_PAGE - 1) * PER_PAGE], PER_PAGE
 // Где PER_PAGE - кол. зап. на.стр
 // CURR_PAGE - текущая стр.
-if(!isset($_GET['page'])) {
+if (!isset($_GET['page'])) {
     $page = 0;
 } else {
-    $page=$_GET['page'];
+    $page = $_GET['page'];
 }
 
 $num = 5; // кол-во записей на странице
@@ -18,23 +18,22 @@ $result = $st->fetch();
 $posts = $result['cnt']; // число новостей в базе
 
 // Общие число страниц
-$total = (($posts-1)/$num)+1;  // 
+$total = (($posts - 1) / $num) + 1; //
 $total = intval($total);
-$page  =  intval($page);
+$page  = intval($page);
 
-for($i=1; $i<=$total; $i++) {
+for ($i = 1; $i <= $total; $i++) {
     $pages[] = $i;
 }
 
 // если $page пустая или отрицательное число то переходим на первую страницу
-if(empty($page) || $page<0) {
+if (empty($page) || $page < 0) {
     $page = 1;
-}
-// если $page большое число то перехожим на последнюю
-elseif($page>$total) {
+} // если $page большое число то перехожим на последнюю
+elseif ($page > $total) {
     $page = $total;
 }
-$start = ($page * $num)-$num; // с какого номера выводим новости
+$start = ($page * $num) - $num; // с какого номера выводим новости
 
 // Выбираем  поля из таблицы news с лимитом
 $sql = ("SELECT * FROM news LIMIT $start, $num");

@@ -11,7 +11,7 @@
         <td class="info"><b>Заголовок</b></td>
         <td class="info"><b>Описание</b></td>
         <td class="info"><b>Полный текст</b></td>
-        <td class="info"><b>Удаление / Изменение</b></td>
+        <td class="info"><b>Изменение / Удаление</b></td>
     </tr>
 <?php foreach ($result as $item) : ?>
 <tr>
@@ -19,8 +19,8 @@
     <td><?php echo $item['title']; ?></td>
     <td><?php echo $item['description']; ?></td>
     <td><?php echo $item['content']; ?></td>
-    <td><a href="index.php?r=delete_realy&id=<?php echo $item['id']; ?>"> Удалить </a>  /
-        <a href="index.php?r=news_update&id=<?php echo $item['id']; ?>"> Изменить </a>
+    <td><a href="index.php?r=news_update&id=<?php echo $item['id']; ?>"> Изменить </a>  /
+        <a href="index.php?r=news_delete_confirm&id=<?php echo $item['id']; ?>"> Удалить </a>
     </td>
 </tr>
 <?php endforeach; ?>

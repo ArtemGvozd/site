@@ -20,11 +20,13 @@
     <div class="carousel-inner">
         <div class="item active">
             <img src="gallery/nife.jpg" alt="">
+
             <div class="carousel-caption">
             </div>
         </div>
         <div class="item">
             <img src="gallery/t23.jpg" alt="">
+
             <div class="carousel-caption">
             </div>
         </div>

@@ -30,9 +30,9 @@ if (isset($_POST['go'])) {
 <html>
 <head>
     <meta charset="utf-8">
-    <script src="../bootstrap/js/jquery-latest.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="../assets/3p/jquery-2.1.1.js"></script>
+    <script src="../assets/3p/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../assets/3p/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
 <form action="" method="POST" class="form-horizontal" role="form">
