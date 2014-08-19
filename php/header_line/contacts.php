@@ -2,10 +2,9 @@
 <head>
     <style type="text/css">
     body{
-    margin-left: 10px;
-    padding-top: 10px;
-    font-family: "Arial";
-    text-align: center;
+        text-align: center;
+        font-family: "Arial";
+        text-align: center;
     }
 </style>
 </head>
@@ -23,7 +22,7 @@ e-mail: meblitopol@pridymay.com.ua <br><br>
     на территории ГГК "МГАТК". ЧП "Железняк"</h3>
 
 Схема проезда на производство:<br>
-</class>
+
 
 <div id="back_map">
     <div id="map">
