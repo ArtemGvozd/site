@@ -35,21 +35,27 @@ if (isset($_POST['go'])) {
     <link href="../assets/3p/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
+<br />
+<center>
+    <h1>Авторизация</h1>
+</center>
+<br />
+<br />
 <form action="" method="POST" class="form-horizontal" role="form">
     <div class="form-group">
-        <label for="inputLogin" class="col-sm-4 control-label">Login</label>
+        <label for="inputLogin" class="col-sm-5 control-label">Login</label>
         <div class="col-sm-3">
             <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Введите логин">
         </div>
     </div>
     <div class="form-group">
-        <label for="inputPassword" class="col-sm-4 control-label">Password</label>
+        <label for="inputPassword" class="col-sm-5 control-label">Password</label>
         <div class="col-sm-3">
             <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="ВВедите пароль">
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-offset-4 col-sm-3">
+        <div class="col-sm-offset-5 col-sm-3">
             <button type="submit" name="go" class="btn btn-primary">Войти</button>
         </div>
     </div>

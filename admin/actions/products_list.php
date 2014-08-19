@@ -12,7 +12,7 @@ if(!isset($_GET['page'])) {
     $page=$_GET['page'];
 }
 
-$num = 10; // кол-во записей на странице
+$num = 5; // кол-во записей на странице
 $sql = ("SELECT COUNT(*) as cnt FROM products ");
 $st = $conect->query($sql);
 $result = $st->fetch();

@@ -16,7 +16,7 @@ if (!empty($_GET['id'])) {
 if(!empty($_POST)) {
     if(!empty($_POST['name'])) {
         if(is_scalar($_POST['name'])){
-            if(strlen($_POST['name'])<30) {
+            if(strlen($_POST['name'])<50) {
                 $name = trim(strip_tags($_POST['name']));
             }else {
                 $error[] = "Слишком длинное имя";
@@ -29,7 +29,7 @@ if(!empty($_POST)) {
     }
     if(!empty($_POST['description'])) {
         if(is_scalar($_POST['description'])) {
-            if(strlen($_POST['description'])<50) {
+            if(strlen($_POST['description'])<250) {
                 $description = trim(strip_tags($_POST['description']));
             }else {
                 $error[] = "Слишком длинное описание";

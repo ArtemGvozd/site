@@ -1,5 +1,14 @@
 <html>
-<head></head>
+<head>
+    <style type="text/css">
+    body{
+    margin-left: 10px;
+    padding-top: 10px;
+    font-family: "Arial";
+    text-align: center;
+    }
+</style>
+</head>
 <body>
 <h2>Вы всегда можете задать интересующие вас вопросы, позвонив нашим специалистам.</h2><br>
 
@@ -14,6 +23,7 @@ e-mail: meblitopol@pridymay.com.ua <br><br>
     на территории ГГК "МГАТК". ЧП "Железняк"</h3>
 
 Схема проезда на производство:<br>
+</class>
 
 <div id="back_map">
     <div id="map">

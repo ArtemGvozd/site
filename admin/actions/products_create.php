@@ -21,7 +21,7 @@ if(!empty($_POST['buton'])) {
 
     if(!empty($_POST['description'])) {
         if(is_scalar($_POST['description'])) {
-            if(strlen($_POST['description'])<200) {
+            if(strlen($_POST['description'])<250) {
                 $description= trim(strip_tags($_POST['description']));
             }else {
                 $error[] = "Слишком длинное описание";
