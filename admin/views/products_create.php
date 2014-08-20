@@ -1,13 +1,13 @@
 <?php head(); ?>
 <form enctype="multipart/form-data" action="" method="POST" class="form-horizontal" role="form">
     <div class="form-group">
-        <label for="inputName" class="col-sm-1 control-label">Name:</label>
+        <label for="inputName" class="col-sm-1 control-label">Название:</label>
         <div class="col-sm-3">
-            <input type="text" name="name" class="form-control" id="inputName" placeholder="Введите ваше имя">
+            <input type="text" name="name" class="form-control" id="inputName" placeholder="Введите название ">
         </div>
     </div>
     <div class="form-group">
-        <label for="inputMessage" class="col-sm-1 control-label">Text:</label>
+        <label for="inputMessage" class="col-sm-1 control-label">Текст:</label>
         <div class="col-sm-3">
             <textarea class="form-control" name="description" rows="10" id="inputMessage"></textarea>
         </div>

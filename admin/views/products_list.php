@@ -19,8 +19,8 @@ head();?>
                 <td><?php echo $item['id']; ?></td>
                 <td><?php echo $item['name']; ?></td>
                 <td><?php echo $item['description']; ?></td>
-                <td><a href="index.php?r=products_delete_confirm&id=<?php echo $item['id']; ?>"> Удалить </a>  /
-                    <a href="index.php?r=products_update&id=<?php echo $item['id']; ?>"> Изменить </a>
+                <td><button type="button" class="btn btn-default"><a href="index.php?r=products_delete_confirm&id=<?php echo $item['id']; ?>"> Удалить </a></button>
+                        <button type="button" class="btn btn-default"><a href="index.php?r=products_update&id=<?php echo $item['id']; ?>"> Изменить </a></button>
                 </td>
                 <td>
                     <img src="<?php echo "../gallery/". $item['image_name']; ?> " width="60" height="50">
