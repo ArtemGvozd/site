@@ -19,15 +19,16 @@
     <td><?php echo $item['title']; ?></td>
     <td><?php echo $item['description']; ?></td>
     <td><?php echo $item['content']; ?></td>
-    <td><button type="button" class="btn btn-default"><a href="index.php?r=news_update&id=<?php echo $item['id']; ?>"> Изменить </a></button>
-            <button type="button" class="btn btn-default"><a href="index.php?r=news_delete_confirm&id=<?php echo $item['id']; ?>"> Удалить </a></button>
+    <td><a href="index.php?r=news_update&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-info"> Изменить </button></a>
+        <a href="index.php?r=news_delete_confirm&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-default"> Удалить </button></a>
     </td>
 </tr>
 <?php endforeach; ?>
 </table>
+
     <?php
 // выводим ссылки Список на количество страниц
-    echo "<center>";    
+    echo "<center>";
     foreach($pages as $q) {
             if($page==$q) {
                 echo '<b>';

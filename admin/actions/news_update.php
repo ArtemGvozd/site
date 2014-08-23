@@ -42,7 +42,7 @@ if(!empty($_POST)) {
     }
     if(!empty($_POST['content'])) {
         if(is_scalar($_POST['content'])) {
-            if(strlen($_POST['content'])<200) {
+            if(strlen($_POST['content'])<150) {
                 $content = trim(strip_tags($_POST['content']));
             }else {
                 $error[] = "Очень много написали :)";

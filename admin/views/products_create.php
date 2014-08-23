@@ -1,29 +1,15 @@
 <?php head(); ?>
-<form enctype="multipart/form-data" action="" method="POST" class="form-horizontal" role="form">
-    <div class="form-group">
-        <label for="inputName" class="col-sm-1 control-label">Название:</label>
-        <div class="col-sm-3">
-            <input type="text" name="name" class="form-control" id="inputName" placeholder="Введите название ">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="inputMessage" class="col-sm-1 control-label">Текст:</label>
-        <div class="col-sm-3">
-            <textarea class="form-control" name="description" rows="10" id="inputMessage"></textarea>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile" class= "col-sm-1 control-label">Картинка:</label>
-        <div class="col-sm-offset-0 col-sm-1">
-            <input type="file" id="exampleInputFile">
-        </div>
-    </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-1 col-sm-4">
-            <button type="submit" name="buton" class="btn btn-primary">Добавить</button>
-        </div>
-    </div>
+<form enctype="multipart/form-data" action="" method="POST" >
+    <table class="table table-hover">
+        <tr>
+            <td class="active"><b>Название:</b></td><td> <input type="text" name="name" value=""></td></tr>
+        <tr>
+            <td class="active"><b>Описание:</b></td><td> <textarea name="description" cols="50" rows="20"></textarea></td></tr>
+        <tr>
+            <td></td><td><INPUT name="image_name" type="file"></td>
+        </tr>
+            <td></td><td> <input type="submit" name="buton" value=" Добавить " /></tr></tr>
+    </table>
 </form>
 
 <center>

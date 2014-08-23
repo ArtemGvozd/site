@@ -18,8 +18,8 @@
     <td><?php echo $item['login']; ?></td>
     <td><?php echo $item['pasword']; ?></td>
     <td><?php echo $item['name']; ?></td>
-    <td><button type="button" class="btn btn-default"><a href="index.php?r=my_page_update&id=<?php echo $item['id']; ?>"> Изменить </a></button>
-        <button type="button" class="btn btn-default"><a href="index.php?r=my_page_delete&id=<?php echo $item['id']; ?>"> Удалить </a></button></td>
+    <td><a href="index.php?r=my_page_update&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-info"> Изменить </a>
+        <a href="index.php?r=my_page_delete&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-default"> Удалить </a></td>
 
 </tr>
 <?php endforeach; ?>
