@@ -4,7 +4,7 @@ $error = array();
 if (isset($_POST['go'])) {
     if(!empty($_POST)) {
         if(empty($_POST['login'])){
-            $error[]= "Пустой логин и пароль";
+            $error['login'] = "Пустой логин и пароль";
         }else {
             include "../bd/configuration.php";
             $conect = new PDO("mysql:host=" . DB_SERVER_NAME. ";dbname=" . DB_NAME,DB_LOGIN,DB_PASW);
@@ -16,7 +16,7 @@ if (isset($_POST['go'])) {
             $sql->execute();
             $result = $sql->fetch();
                 if (empty($result)){
-                    $error[]= "BAD логин и пароль";
+                    $error['res'] = "BAD логин и пароль";
                 } else {
                     $_SESSION['in'] = $result['id'];
                     header ("Location: index.php");
@@ -42,17 +42,23 @@ if (isset($_POST['go'])) {
 <br />
 <br />
 <form action="" method="POST" class="form-horizontal" role="form">
-    <div class="form-group">
+    <div class="form-group <?php if (!empty($error['login'])) : ?> has-error <?php endif; ?>">
         <label for="inputLogin" class="col-sm-5 control-label">Login</label>
         <div class="col-sm-3">
             <input type="text" name="login" class="form-control" id="inputLogin" placeholder="Введите логин">
         </div>
+        <?php if (!empty($error['login'])) : ?>
+            <span class="help-block"><?php echo $error['login']; ?></span>
+        <?php endif; ?>
     </div>
-    <div class="form-group">
+    <div class="form-group <?php if (!empty($error['login'])) : ?> has-error <?php endif; ?>">
         <label for="inputPassword" class="col-sm-5 control-label">Password</label>
         <div class="col-sm-3">
             <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="ВВедите пароль">
         </div>
+        <?php if (!empty($error['res'])) : ?>
+            <span class="help-block"><?php echo $error['res']; ?></span>
+        <?php endif; ?>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-5 col-sm-3">
@@ -60,11 +66,6 @@ if (isset($_POST['go'])) {
         </div>
     </div>
 </form>
-    <?php
-        foreach ($error as $i) {
-            echo $i . "<br>";
-        }
-?>
 </div>
 </body>
 </html>

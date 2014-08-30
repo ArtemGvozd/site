@@ -24,19 +24,15 @@
 </tr>
 <?php endforeach; ?>
 </table>
-    <?php
-    echo "<center>";
-    foreach ($pages as $q) {
-        if($page==$q) {
-            echo "<b>";
-        }
-        print '<a href="index.php?r=admins&page='.$q.'">' . $q . " | ". "</a>"; 
-        if($page==$q) {
-            echo "</b>";
-        }
-    }
-    echo "</center>";
-    ?>
+    <center>
+        <ul class="pagination">
+            <li><a href="index.php?r=admins&page=<?php echo $page - 1 ?>">&laquo;</a></li>
+            <?php foreach ($pages as $q) { ?>
+                <li class><a href="index.php?r=admins&page=<?php echo $q ?>"><?php echo $q ?>   </a></li>
+            <?php } ?>
+            <li><a href="index.php?r=admins&page=<?php echo $page + 1 ?>">&raquo;</a></li>
+        </ul>
+    </center>
 </div>
 <?php endif;?>
 <?php foot(); ?>

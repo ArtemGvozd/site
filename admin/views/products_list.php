@@ -5,13 +5,13 @@ head();?>
         <a href="index.php?r=products_create"> Добавление Продукта </a><br>
     </div>
 
-<?php if ($result) : ?>
+    <?php if ($result) : ?>
     <table class="table table-hover">
         <tr>
             <td class="info">ID</td>
             <td class="info"><b> Имя </b></td>
             <td class="info"><b> Описание </b></td>
-            <td class="info"><b>Удаление / Изменение</b></td>
+            <td class="info"><b>Изменение / Удаление</b></td>
             <td class="info"><b>Картинка</b></td>
         </tr>
         <?php foreach ($result as $item) : ?>
@@ -19,29 +19,26 @@ head();?>
                 <td><?php echo $item['id']; ?></td>
                 <td><?php echo $item['name']; ?></td>
                 <td><?php echo $item['description']; ?></td>
-                <td><a href="index.php?r=products_delete_confirm&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-default"> Удалить </a>
-                        <a href="index.php?r=products_update&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-info"> Изменить </a>
+                <td><a href="index.php?r=products_update&id=<?php echo $item['id']; ?>" button type="button"
+                       class="btn btn-info"> Изменить </a>
+                    <a href="index.php?r=products_delete_confirm&id=<?php echo $item['id']; ?>" button type="button"
+                       class="btn btn-default"> Удалить </a>
                 </td>
                 <td>
-                    <img src="<?php echo "../gallery/". $item['image_name']; ?> " width="60" height="50">
+                    <img src="<?php echo "../gallery/" . $item['image_name']; ?> " width="60" height="50">
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
-<?php
-// выводим ссылки Список на количество страниц
-    echo "<center>";
-    foreach($pages as $q) {
-        if($page==$q) {
-            echo '<b>';
-        }
-        print '<a href="index.php?r=products_list&page='.$q.'">' . $q . " | " . "</a>";
-        if($page==$q) {
-            echo '</b>';
-        }
-    }
-    echo "</center>";
-    ?>
-    </div>
+    <center>
+        <ul class="pagination">
+            <li><a href="index.php?r=products_list&page=<?php echo $page - 1 ?>">&laquo;</a></li>
+            <?php foreach ($pages as $q) { ?>
+                <li class><a href="index.php?r=products_list&page=<?php echo $q ?>"><?php echo $q ?>   </a></li>
+            <?php } ?>
+            <li><a href="index.php?r=products_list&page=<?php echo $page + 1 ?>">&raquo;</a></li>
+        </ul>
+    </center>
+</div>
 <?php endif; ?>
 <?php foot(); ?>

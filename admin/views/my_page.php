@@ -1,20 +1,35 @@
 <?php head();?>
-    <form method="POST">
-        <table class="table table-hover">
-            <tr>
-                <td class="active"><b> Имя:</b></td><td> <input type="text" name="name" value="<?php echo $result['name'] ?>"></td></tr></tr>
-            <tr>
-                 <td class="active"><b>ЛОГИН:</b></td><td> <input type="text" name="login" value="<?php echo $result['login'] ?>"></td></tr></tr>
-            <tr>
-                <td class="active"><b>Пароль:</b></td><td> <input type="password" name="pasword" value=""></td></tr></tr>
-            <tr>
-               <td class="active"><b>Повторите пароль:</b></td><td> <input type="password" name="paswor_d" value=""></td></tr></tr>
-        <tr>
-            <td></td><td><input type="submit" name="buton" value=" Изменить "></td></tr>
-        </table>
-    </form>
-     
- <center>
+<form method="POST" action="" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="inputName" class="col-sm-1 control-label">Имя:</label>
+        <div class="col-sm-3">
+            <input type="text" name="name" class="form-control" id="inputName" value="<?php echo $result['name'] ?>" ">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputLogin" class="col-sm-1 control-label">Логин:</label>
+        <div class="col-sm-3">
+            <input type="text" name="login" class="form-control" id="inputLogin" value="<?php echo $result['login'] ?>" ">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPasword" class="col-sm-1 control-label">Пароль:</label>
+        <div class="col-sm-3">
+            <input type="password" name="pasword" class="form-control" id="inputDescription">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPaswor_d" class="col-sm-1 control-label">Повторите пароль:</label>
+        <div class="col-sm-3">
+            <input type="password" name="paswor_d" class="form-control" id="inputPaswor_d">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-4">
+            <button type="submit" name="buton" class="btn btn-primary">Изменить</button>
+        </div>
+    </div>
+</form>
 <?php
 foreach($error as $p) {
     echo $p . "<br>";
