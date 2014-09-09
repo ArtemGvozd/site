@@ -1,7 +1,7 @@
 <?php head(); ?>
 <div class="panel panel-default">
-    <div class="panel-body">
-<a href="index.php?r=my_page_create">Добавление администратора</a>
+    <div class="btn-group">
+        <a href="index.php?r=news_create" button type="button" class="btn btn-info"> Добавление Администратора </button></a>
     </div>
 <?php if ($result) : ?>
     <table class="table table-hover">
@@ -19,7 +19,7 @@
     <td><?php echo $item['pasword']; ?></td>
     <td><?php echo $item['name']; ?></td>
     <td><a href="index.php?r=my_page_update&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-info"> Изменить </a>
-        <a href="index.php?r=my_page_delete&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-default"> Удалить </a></td>
+        <a href="index.php?r=my_page_delete_confirm&id=<?php echo $item['id']; ?>" button type="button" class="btn btn-default"> Удалить </a></td>
 
 </tr>
 <?php endforeach; ?>

@@ -1,8 +1,7 @@
-<?php
-head();?>
+<?php head();?>
 <div class="panel panel-default">
-    <div class="panel-body">
-        <a href="index.php?r=products_create"> Добавление Продукта </a><br>
+    <div class="btn-group">
+        <a href="index.php?r=news_create" button type="button" class="btn btn-info"> Добавление Продукта </button></a>
     </div>
 
     <?php if ($result) : ?>

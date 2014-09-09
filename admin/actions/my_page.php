@@ -20,7 +20,7 @@ if(!empty($_POST)) {
     if(!empty($_POST['name'])) {
         if(is_scalar($_POST['name'])) {
             if(strlen($_POST['name'])<20) {
-                $name=  trim(strip_tags($_POST['name']));
+                    $name=  trim(strip_tags($_POST['name']));
             } else {
                 $error[] = "Слишком длинное имя";
             }

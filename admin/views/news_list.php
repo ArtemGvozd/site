@@ -1,10 +1,9 @@
 <?php head(); ?>
 <div class="panel panel-default">
-    <div class="panel-body">
-        <a href="index.php?r=news_create"> Добавление Новостей </a><br>
+    <div class="btn-group">
+        <a href="index.php?r=news_create" button type="button" class="btn btn-info"> Добавление Новостей </button></a>
     </div>
-
-    <?php if ($result) : ?>
+       <?php if ($result) : ?>
     <table class="table table-hover">
         <tr>
             <td class="info">ID</td>
@@ -31,7 +30,7 @@
         <ul class="pagination">
             <li><a href="index.php?r=news_list&page=<?php echo $page - 1 ?>">&laquo;</a></li>
             <?php foreach ($pages as $q) { ?>
-                <li class><a href="index.php?r=news_list&page=<?php echo $q ?>"><?php echo $q ?>   </a></li>
+                <li><a href="index.php?r=news_list&page=<?php echo $q ?>"><?php echo $q ?>   </a></li>
             <?php } ?>
             <li><a href="index.php?r=news_list&page=<?php echo $page + 1 ?>">&raquo;</a></li>
         </ul>
