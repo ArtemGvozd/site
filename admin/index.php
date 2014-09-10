@@ -27,9 +27,29 @@ function foot() {
     require_once getcwd() . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'foot.php';
 }
 
+class Registry {
+    private static $_data;
+
+    public static function getValue($key) {
+        return empty(self::$_data[$key]) ? false : self::$_data[$key];
+        if (empty(self::$_data[$key])) {
+            return false;
+        } else {
+            return self::$_data[$key];
+        }
+    }
+
+    public static function setValue($key, $value)
+    {
+        return self::$_data[$key] = $value;
+    }
+}
+
 if (!in_array($action, $allowed)) {
     die('Invalid request');
 } else {
+    Registry::setValue('action', $action);
+
     require_once getcwd() . DIRECTORY_SEPARATOR . 'actions' . DIRECTORY_SEPARATOR . $action . '.php';
     require_once getcwd() . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $action . '.php';  
-}    
+}

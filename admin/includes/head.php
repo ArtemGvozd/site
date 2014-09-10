@@ -14,9 +14,15 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php?r=news_list">Новости</a></li>
-                        <li><a href="index.php?r=admins">Администрирование</a></li>
-                        <li><a href="index.php?r=products_list">Продукты</a></li>
+                        <li class="<?php if (Registry::getValue('action') == 'news_list') : ?>active<?php endif; ?>">
+                            <a href="index.php?r=news_list">Новости</a>
+                        </li>
+                        <li class="<?php if (Registry::getValue('action') == 'admins') : ?>active<?php endif; ?>">
+                            <a href="index.php?r=admins">Администрирование</a>
+                        </li>
+                        <li class="<?php if (Registry::getValue('action') == 'products_list') : ?>active<?php endif; ?>">
+                        <a href="index.php?r=products_list">Продукты</a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">

@@ -1,8 +1,8 @@
 <?php head(); ?>
-<div class="panel panel-default">
+<div class="panel panel-default"><br />
     <div class="btn-group">
-        <a href="index.php?r=news_create" button type="button" class="btn btn-info"> Добавление Администратора </button></a>
-    </div>
+        <a href="index.php?r=news_create" button type="button" class="btn btn-default"> Добавление Администратора </button></a>
+    </div><br /><br />
 <?php if ($result) : ?>
     <table class="table table-hover">
     <tr>
